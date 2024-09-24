@@ -12,15 +12,13 @@
 
 <?php
 
-require_once 'vendor/autoload.php';
-
 use App\SitesRepository;
 
 $repository = new SitesRepository();
 
 foreach ($repository->getSites() as $site) {
     echo '<hr>';
-    $url = "site.php?slug=$site->slug";
+    $url = "sites/$site->slug";
     echo "<h2> <a href='$url'> $site->name </a> </h2>";
 }
 

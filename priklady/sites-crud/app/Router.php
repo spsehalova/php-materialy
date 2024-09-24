@@ -55,7 +55,9 @@ class Router
                         }
                         else
                         {
-                            echo $e->getMessage();
+                            echo layout('Error', function () use ($e) {
+                                return "<h1> {$e->getMessage()} </h1>";
+                            });
                         }
                         die($e->getCode());
                     }
@@ -70,7 +72,9 @@ class Router
                         }
                         else
                         {
-                            echo 'Internal Server Error';
+                            echo layout('Internal Server Error', function () {
+                                return "<h1> Internal Server Error </h1>";
+                            });
                         }
                         die(500);
                     }
@@ -96,6 +100,12 @@ class Router
                         'data' => $response
                     ]);
                     return;
+                }
+                else {
+                    if (isset($response) && is_string($response))
+                    {
+                        echo $response;
+                    }
                 }
 
                 return;

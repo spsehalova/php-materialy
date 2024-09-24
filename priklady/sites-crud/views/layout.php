@@ -1,17 +1,8 @@
 <?php
 
-require_once 'vendor/autoload.php';
-
-$slug = $_GET['slug'];
-
-use App\SitesRepository;
-
-$repository = new SitesRepository();
-
-$site = $repository->findBySlug($slug);
+use App\Config;
 
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,15 +10,22 @@ $site = $repository->findBySlug($slug);
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><?= $site->name ?></title>
+    <title> <?= $title ?? 'Document' ?> </title>
 </head>
 <body>
 
-<a href="index.php"> Home </a>
+<?= $content ?? '' ?>
 
-<h1> <?= $site->name ?> </h1>
-
-<?= $site->content ?>
+<hr>
+<footer>
+    <p> SPSE HALOVA </p>
+    <a href="<?= Config::URL ?>"> HOME </a>
+</footer>
 
 </body>
 </html>
+<style>
+    body {
+        background-color: antiquewhite;
+    }
+</style>

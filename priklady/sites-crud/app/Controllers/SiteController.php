@@ -30,18 +30,16 @@ class SiteController
 
         $repository = new SitesRepository();
 
-        if (is_numeric($idOrSlug))
-        {
-            $site = $repository->findById((int) $idOrSlug) ?? $repository->findBySlug((string) $idOrSlug);
-        }
-        else
-        {
+        if (is_numeric($idOrSlug)) {
+            $site = $repository->findById((int)$idOrSlug) ?? $repository->findBySlug((string)$idOrSlug);
+        } else if (isset($idOrSlug)) {
             $site = $repository->findBySlug($idOrSlug);
+        } else {
+            $site = null;
         }
 
 
-        if (!$site)
-        {
+        if (!$site) {
             throw new Exception('Site not found', 404);
         }
 
