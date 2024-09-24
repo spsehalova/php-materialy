@@ -30,7 +30,15 @@ class SiteController
 
         $repository = new SitesRepository();
 
-        $site = $repository->findById($idOrSlug) ?? $repository->findBySlug($idOrSlug);
+        if (is_numeric($idOrSlug))
+        {
+            $site = $repository->findById((int) $idOrSlug) ?? $repository->findBySlug((string) $idOrSlug);
+        }
+        else
+        {
+            $site = $repository->findBySlug($idOrSlug);
+        }
+
 
         if (!$site)
         {
