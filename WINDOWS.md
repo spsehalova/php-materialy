@@ -30,7 +30,7 @@ sudo add-apt-repository ppa:ondrej/php -y
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt install php8.3 php8.3-cli -y
-sudo apt install openssl php8.3-bcmath php8.3-curl php8.3-mbstring php8.3-mysql php8.3-tokenizer php8.3-xml php8.3-zip php8.3-sqlite3 
+sudo apt install openssl php8.3-bcmath php8.3-curl php8.3-mbstring php8.3-mysql php8.3-tokenizer php8.3-xml php8.3-zip php8.3-sqlite3 -y 
 ```
 
 ## Composer (package manager)
@@ -39,7 +39,7 @@ sudo apt install openssl php8.3-bcmath php8.3-curl php8.3-mbstring php8.3-mysql 
 sudo apt install unzip -y
 
 # download
-cd ~ && curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php`
+cd ~ && curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
 
 # verifikacia
 HASH=`curl -sS https://composer.github.io/installer.sig`
