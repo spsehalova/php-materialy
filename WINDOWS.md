@@ -19,11 +19,14 @@ Moznost A:
 1. Otvor si Microsoft store
 2. Stiahni "Ubuntu" (bude sa to volat iba Ubuntu, bez cisla verzie)
 
-(moznost B skusaj az ked moznost A nefunguje)
+(moznost B skusaj az ked moznost A nefunguje):
 
 Moznost B:
 1. Otvor CMD ako administrator
 2. Spusti prikaz `wsl --install`
+
+___
+tu pokracuj ked dokoncis bud moznost A alebo B:
 
 3. Vypyta si to od teba nazov usera a heslo, zadaj si nieco jednoduche
 4. Restart PC
