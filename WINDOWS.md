@@ -15,9 +15,17 @@ Instalacia WSL, PHP a PHPSTORM na windowse.
 
 # WSL
 
+Moznost A:
+1. Otvor si Microsoft store
+2. Stiahni "Ubuntu" (bude sa to volat iba Ubuntu, bez cisla verzie)
+
+(moznost B skusaj az ked moznost A nefunguje)
+
+Moznost B:
 1. Otvor CMD ako administrator
 2. Spusti prikaz `wsl --install`
-3. Ako usera a heslo si zadaj nieco jednoduche
+
+3. Vypyta si to od teba nazov usera a heslo, zadaj si nieco jednoduche
 4. Restart PC
 
 # PHP
